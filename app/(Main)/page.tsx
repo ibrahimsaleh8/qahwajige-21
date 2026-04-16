@@ -8,6 +8,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import { CurrentProjectId } from "@/lib/ProjectId";
 import RatingSection from "@/components/RatingSection";
 import { FetchProjectData } from "@/lib/FetchProjectData";
+import { WhyUsSection } from "@/components/WhyUsSection";
 
 export default async function HomePage() {
   const { data } = await FetchProjectData();
@@ -16,6 +17,7 @@ export default async function HomePage() {
       <HeroSection {...data.hero} images={data.gallery} />
       <AboutSection {...data.about} />
       <ServicesSection {...data.services} />
+      <WhyUsSection {...data.whyUs} />
       <PremiumPackagesSection
         packages={data.packages ?? []}
         whatsapp={data.hero?.whatsApp ?? ""}

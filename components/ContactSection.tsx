@@ -57,18 +57,18 @@ export default function ContactSection({
   return (
     <section
       id="contact"
-      className="relative bg-second-bg py-32 overflow-hidden">
+      className="relative bg-[#332327] py-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Header */}
         <div className="text-center mb-20">
-          <span className="inline-block bg-main-color text-white text-xs font-bold uppercase tracking-wide px-5 py-2 rounded-full mb-4">
+          <span className="inline-block bg-[#2f7a63] text-[#f8f3e8] text-xs font-bold uppercase tracking-wide px-5 py-2 rounded-full mb-4">
             تواصل معنا بسهولة
           </span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-main-black leading-tight mb-4">
+          <h2 className="section-title text-4xl md:text-5xl text-[#f8f3e8] leading-tight mb-4 uppercase">
             نحن هنا للإجابة على استفساراتك
           </h2>
-          <div className="w-24 h-1.5 bg-accent-gold rounded-full mx-auto mb-4 shadow-md" />
-          <p className="text-low-color max-w-xl mx-auto text-lg">
+          <div className="w-24 h-1.5 bg-[#d6b87c] rounded-full mx-auto mb-4 shadow-md" />
+          <p className="text-[#eadfca] max-w-xl mx-auto text-lg">
             يمكنكم التواصل معنا عبر الهاتف، البريد الإلكتروني، أو واتساب. نسعد
             دائمًا بخدمتكم.
           </p>
@@ -81,21 +81,21 @@ export default function ContactSection({
             {contactItems.map((item, i) => (
               <div
                 key={i}
-                className="bg-card-background rounded-2xl p-6 flex items-center gap-4
-                  shadow-md border border-main-color/10
+                className="bg-[#f8f3e8] rounded-2xl p-6 flex items-center gap-4
+                  shadow-md border border-[#2b1f1a]/10
                   hover:-translate-y-1 hover:shadow-lg
                   transition-all duration-200 group">
                 {/* Icon bubble */}
                 <div
                   className="w-12 h-12 rounded-full flex items-center justify-center
-                  bg-main-color/10 text-main-color shrink-0
-                  group-hover:bg-main-color group-hover:text-white transition-all duration-200">
+                  bg-[#2f7a63]/10 text-[#2f7a63] shrink-0
+                  group-hover:bg-[#2f7a63] group-hover:text-white transition-all duration-200">
                   {item.icon}
                 </div>
 
                 {/* Label and Value */}
                 <div className="min-w-0">
-                  <p className="text-xs font-bold uppercase tracking-wide text-black mb-0.5">
+                  <p className="text-xs font-bold uppercase tracking-wide text-[#201613] mb-0.5">
                     {item.label}
                   </p>
                   {item.href ? (
@@ -104,11 +104,11 @@ export default function ContactSection({
                       dir={item.ltr ? "ltr" : "rtl"}
                       target={item.external ? "_blank" : undefined}
                       rel={item.external ? "noopener noreferrer" : undefined}
-                      className="text-black font-semibold text-sm hover:text-main-color transition-colors truncate block">
+                      className="text-[#201613] font-semibold text-sm hover:text-[#2f7a63] transition-colors truncate block">
                       {item.value}
                     </a>
                   ) : (
-                    <p className="text-black font-semibold text-sm">
+                    <p className="text-[#201613] font-semibold text-sm">
                       {item.value}
                     </p>
                   )}
@@ -123,8 +123,8 @@ export default function ContactSection({
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-4 flex items-center justify-center gap-3 font-black uppercase text-sm
-                  bg-main-color text-white px-8 py-4 rounded-full
-                  shadow-md hover:bg-main-color-dark hover:-translate-y-0.5
+                  bg-[#2f7a63] text-white px-8 py-4 rounded-full
+                  shadow-md hover:bg-[#1e5a49] hover:-translate-y-0.5
                   active:translate-y-1 active:shadow-sm
                   transition-all duration-200">
                 <FaWhatsapp className="w-5 h-5" />
@@ -134,7 +134,7 @@ export default function ContactSection({
           </div>
 
           {/* Map */}
-          <div className="lg:col-span-3 rounded-3xl overflow-hidden shadow-lg relative border border-main-color/10 min-h-87.5">
+          <div className="lg:col-span-3 rounded-3xl overflow-hidden shadow-lg relative border border-[#f8f3e8]/20 min-h-87.5">
             <iframe
               src={mapEmbedSrc}
               loading="lazy"

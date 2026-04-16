@@ -109,18 +109,18 @@ export default function RatingSection({
   return (
     <section
       id="rating"
-      className="relative py-24 bg-linear-to-b from-main-color/95 to-main-color/80 text-white overflow-hidden">
+      className="relative py-20 bg-[#efe8da] text-[#2b1f1a] overflow-hidden">
       <div className="max-w-3xl mx-auto px-6 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="inline-block bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-bold uppercase tracking-wide px-5 py-2 rounded-full mb-5">
+          <span className="inline-block bg-[#2f7a63] text-[#f8f3e8] text-xs font-bold uppercase tracking-wide px-5 py-2 rounded-full mb-5">
             التقييمات
           </span>
-          <h2 className="text-4xl md:text-6xl font-extrabold leading-tight -rotate-1 mb-4">
+          <h2 className="section-title text-4xl md:text-6xl leading-tight mb-4 uppercase">
             قيّم تجربتك
           </h2>
-          <div className="w-20 h-2 bg-accent-gold rounded-full mx-auto mb-4 shadow-glow" />
-          <p className="text-white/80 max-w-xl mx-auto text-lg">
+          <div className="w-20 h-2 bg-[#2f7a63] rounded-full mx-auto mb-4" />
+          <p className="text-[#6f5b4a] max-w-xl mx-auto text-lg">
             رأيك يساعدنا على تقديم تجربة ضيافة أفضل دائماً.
           </p>
         </div>
@@ -131,28 +131,28 @@ export default function RatingSection({
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
           viewport={{ once: true }}
-          className="bg-second-bg rounded-3xl shadow-luxury overflow-hidden">
+          className="bg-[#f8f3e8] rounded-3xl shadow-[0_14px_30px_rgba(18,12,10,0.14)] overflow-hidden border border-[#2b1f1a]/10">
           {/* Stats row */}
           {(averageRating > 0 || totalRatings > 0) && (
-            <div className="grid grid-cols-2 divide-x divide-x-reverse divide-main-color/20 border-b border-main-color/20">
+            <div className="grid grid-cols-2 divide-x divide-x-reverse divide-[#2b1f1a]/15 border-b border-[#2b1f1a]/15">
               {averageRating > 0 && (
                 <div className="py-10 px-6 text-center">
-                  <div className="text-5xl md:text-6xl font-black text-main-color mb-2">
+                  <div className="text-5xl md:text-6xl font-black text-[#2f7a63] mb-2">
                     {averageRating.toFixed(1)}
                   </div>
-                  <div className="w-10 h-1 bg-accent-gold rounded-full mx-auto mb-2" />
-                  <p className="text-xs font-semibold uppercase tracking-wide text-low-color">
+                  <div className="w-10 h-1 bg-[#d6b87c] rounded-full mx-auto mb-2" />
+                  <p className="text-xs font-semibold uppercase tracking-wide text-[#6f5b4a]">
                     متوسط التقييم
                   </p>
                 </div>
               )}
               {totalRatings > 0 && (
                 <div className="py-10 px-6 text-center">
-                  <div className="text-5xl md:text-6xl font-black text-main-color mb-2">
+                  <div className="text-5xl md:text-6xl font-black text-[#2f7a63] mb-2">
                     {totalRatings}
                   </div>
-                  <div className="w-10 h-1 bg-accent-gold rounded-full mx-auto mb-2" />
-                  <p className="text-xs font-semibold uppercase tracking-wide text-low-color">
+                  <div className="w-10 h-1 bg-[#d6b87c] rounded-full mx-auto mb-2" />
+                  <p className="text-xs font-semibold uppercase tracking-wide text-[#6f5b4a]">
                     {totalRatings === 1 ? "تقييم" : "تقييمات"}
                   </p>
                 </div>
@@ -165,16 +165,16 @@ export default function RatingSection({
             {submitted !== null && mounted ? (
               <>
                 {renderStars(submitted, false)}
-                <div className="mt-3 bg-main-color/10 border border-main-color/20 text-main-color text-sm font-bold uppercase tracking-wide px-10 py-3 rounded-full shadow-inner">
+                <div className="mt-3 bg-[#2f7a63]/10 border border-[#2f7a63]/20 text-[#2f7a63] text-sm font-bold uppercase tracking-wide px-10 py-3 rounded-full shadow-inner">
                   ✅ تم إرسال تقييمك
                 </div>
               </>
             ) : (
               <>
                 {renderStars(displayRating, true)}
-                <p className="text-sm font-semibold uppercase tracking-wide text-low-color min-h-5">
+                <p className="text-sm font-semibold uppercase tracking-wide text-[#6f5b4a] min-h-5">
                   {isLoading ? (
-                    <span className="text-main-color animate-pulse">
+                    <span className="text-[#2f7a63] animate-pulse">
                       جاري الإرسال...
                     </span>
                   ) : mounted ? (
@@ -188,7 +188,7 @@ export default function RatingSection({
           </div>
 
           {/* Bottom accent bar */}
-          <div className="h-1.5 bg-accent-gold rounded-t-full" />
+          <div className="h-1.5 bg-[#2f7a63] rounded-t-full" />
         </motion.div>
       </div>
     </section>

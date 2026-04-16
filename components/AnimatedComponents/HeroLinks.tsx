@@ -23,9 +23,9 @@ export default function HeroLinks({
           whileTap={{ scale: 0.97 }}
           whileHover={{ y: -2 }}
           className="flex items-center gap-3 text-sm md:text-base font-bold uppercase tracking-wide
-            bg-white text-black
-            px-8 py-4 rounded-full
-            transition-colors duration-200
+            bg-[#2f7a63] text-[#f8f3e8]
+            px-8 py-4 rounded-full border border-[#1e5a49]
+            transition-colors duration-200 shadow-md
             active:shadow-[0_2px_0_rgba(0,0,0,0.15)] active:translate-y-1">
           <FaWhatsapp className="w-5 h-5" />
           احجز معنا الان
@@ -41,10 +41,10 @@ export default function HeroLinks({
         <Link
           href="#packages"
           className="flex items-center gap-3 text-sm md:text-base font-bold uppercase tracking-wide
-            bg-white/15 backdrop-blur-sm text-white
-            border border-white/40
+            bg-[#f8f3e8] text-[#2b1f1a]
+            border border-[#2b1f1a]/25
             px-8 py-4 rounded-full
-            transition-all duration-200
+            transition-all duration-200 shadow-md
             active:shadow-[0_2px_0_rgba(0,0,0,0.1)] active:translate-y-1">
           شاهد الباقات
           <ArrowLeft className="w-5 h-5" />

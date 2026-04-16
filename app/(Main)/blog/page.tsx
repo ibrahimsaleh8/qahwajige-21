@@ -61,7 +61,7 @@ export default async function ArticlesPage() {
         {/* Empty state */}
         {articles.length === 0 ? (
           <div className="bg-second-bg rounded-3xl p-20 text-center border border-main-color/10">
-            <p className="text-low-color font-semibold uppercase tracking-widest text-sm">
+            <p className="text-white font-semibold uppercase tracking-widest text-sm">
               لا توجد مقالات متاحة حالياً
             </p>
             <div className="mt-6 w-16 h-1.5 bg-accent-gold rounded-full mx-auto" />
@@ -72,7 +72,7 @@ export default async function ArticlesPage() {
               <Link
                 key={article.id}
                 href={`/${article.title.split(" ").join("-")}`}
-                className="group flex flex-col bg-second-bg rounded-md overflow-hidden
+                className="group flex flex-col bg-white rounded-md overflow-hidden
                   border border-white/20
                   hover:-translate-y-2 
                   transition-all duration-300">

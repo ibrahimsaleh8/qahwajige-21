@@ -13,39 +13,41 @@ export default function HeroSection({
   return (
     <section
       id="home"
-      className="relative bg-main-color overflow-hidden min-h-screen w-full">
-      <HeroBackgroundCarousel images={images} />
+      className="relative overflow-hidden w-full bg-[#ede6d8] py-14 sm:py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+        <div className="rounded-[2rem] border border-[#2b1f1a]/10 bg-[#f8f3e8] p-4 sm:p-6 shadow-[0_20px_45px_rgba(32,22,19,0.16)]">
+          <div className="grid lg:grid-cols-12 gap-6 items-center">
+            <div className="lg:col-span-5 text-center lg:text-start">
+              <p className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.24em] text-white mb-5 px-4 py-2 rounded-full bg-[#2f7a63]">
+                <span className="h-2 w-2 rounded-full bg-white" />
+                قهوة طازجة يومياً
+              </p>
 
-      <div className="w-full min-h-screen pb-50 flex flex-col gap-3 items-center justify-center text-center px-4 sm:px-6 relative z-10 ">
-        <div className="flex flex-col justify-center order-2 lg:order-1 py-10 lg:py-0">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent-gold mb-5">
-            ضيافة عربية بطابع ملكي
-          </p>
+              <h1 className="section-title leading-[1.02] mb-6 text-4xl sm:text-5xl lg:text-6xl uppercase text-[#201613]">
+                {headline?.split(" ").map((word, i) =>
+                  i === 0 ? (
+                    <span key={i} className="text-[#2f7a63]">
+                      {word}{" "}
+                    </span>
+                  ) : (
+                    <span key={i}>{word} </span>
+                  ),
+                )}
+              </h1>
 
-          {/* Headline */}
-          <h1 className="font-black leading-[1.1] mb-6 text-5xl sm:text-6xl lg:text-7xl -rotate-1">
-            {headline?.split(" ").map((word, i) =>
-              i === 0 ? (
-                <span key={i} className="text-accent-gold">
-                  {word}{" "}
-                </span>
-              ) : (
-                <span key={i} className="text-white">
-                  {word}{" "}
-                </span>
-              ),
-            )}
-          </h1>
+              <div className="w-24 h-1.5 bg-[#2f7a63] rounded-full mb-6 mx-auto lg:mx-0" />
 
-          {/* Divider */}
-          <div className="w-full h-1.5 bg-accent-gold rounded-full mb-6" />
+              <p className="text-base sm:text-lg text-[#4b392f] leading-relaxed max-w-xl mb-8">
+                {subheadline}
+              </p>
 
-          {/* Subheadline */}
-          <p className="text-base sm:text-lg text-white/90 leading-relaxed max-w-xl mb-10">
-            {subheadline}
-          </p>
+              <HeroLinks whatsApp={whatsApp} />
+            </div>
 
-          <HeroLinks whatsApp={whatsApp} />
+            <div className="lg:col-span-7">
+              <HeroBackgroundCarousel images={images} />
+            </div>
+          </div>
         </div>
       </div>
     </section>

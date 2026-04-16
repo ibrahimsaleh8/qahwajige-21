@@ -30,20 +30,19 @@ export function Header({ brandName, whatsapp }: HeaderProps) {
       className={`sticky top-0 left-0 right-0 z-50 transition-all duration-300
        bg-main-background border-b border-main-color/10 backdrop-blur-sm shadow-sm`}>
       <div className="container mx-auto px-4 md:px-8">
-        <div className="flex items-center justify-between h-20" dir="rtl">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="group">
             <span
               className="inline-block font-black text-base md:text-2xl leading-none
-              text-main-color -rotate-1
-              group-hover:text-main-color-dark group-hover:rotate-0
+              text-main-color-dark 
               transition-all duration-200">
               {brandName}
             </span>
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-1 bg-main-color/70 backdrop-blur-sm border border-main-color/15 rounded-full px-3 py-1.5 shadow-[0_4px_16px_rgba(0,166,133,0.08)]">
+          <nav className="hidden lg:flex items-center gap-1 bg-main-color-dark/90 backdrop-blur-sm border border-main-color/15 rounded-full px-3 py-1.5 shadow-[0_4px_16px_rgba(0,166,133,0.08)]">
             {navLinks.map((link) => (
               <Link
                 key={link.href}

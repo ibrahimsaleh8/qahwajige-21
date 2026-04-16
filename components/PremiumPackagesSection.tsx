@@ -20,18 +20,18 @@ export default function PremiumPackagesSection({
   return (
     <section
       id="packages"
-      className="relative bg-second-bg py-28 overflow-hidden">
+      className="relative bg-[#efe8da] py-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center mb-20">
-          <span className="inline-block bg-main-color text-white text-xs font-bold uppercase tracking-widest px-5 py-2 rounded-full mb-5">
+          <span className="inline-block bg-[#2f7a63] text-[#f8f3e8] text-xs font-bold uppercase tracking-widest px-5 py-2 rounded-full mb-5">
             باقاتنا
           </span>
-          <h2 className="text-4xl md:text-6xl font-extrabold text-main-black -rotate-1 leading-tight">
+          <h2 className="section-title text-4xl md:text-6xl text-[#201613] leading-tight uppercase">
             اختر الباقة المناسبة
           </h2>
-          <div className="w-16 h-1.5 bg-accent-gold rounded-full mx-auto mt-6 mb-5" />
-          <p className="text-low-color max-w-2xl mx-auto text-lg">
+          <div className="w-16 h-1.5 bg-[#2f7a63] rounded-full mx-auto mt-6 mb-5" />
+          <p className="text-[#6f5b4a] max-w-2xl mx-auto text-lg">
             باقات مصممة بعناية لتقديم تجربة ضيافة سعودية فاخرة تليق بضيوفك.
           </p>
         </div>
@@ -53,18 +53,17 @@ export default function PremiumPackagesSection({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`relative rounded-md overflow-hidden flex flex-col shadow-lg border
-                 bg-white text-black`}>
+                className="relative rounded-3xl overflow-hidden flex flex-col shadow-[0_14px_30px_rgba(18,12,10,0.16)] border border-[#2b1f1a]/10 bg-[#f8f3e8] text-[#2b1f1a]">
                 {/* Featured badge */}
                 {isFeatured && (
-                  <div className="absolute top-5 left-5 z-20 bg-accent-gold text-black text-xs font-extrabold uppercase tracking-wider px-3 py-1 rounded-full -rotate-2 shadow-md">
+                  <div className="absolute top-5 left-5 z-20 bg-[#d6b87c] text-[#201613] text-xs font-extrabold uppercase tracking-wider px-3 py-1 rounded-full -rotate-2 shadow-md">
                     الأكثر طلباً ⭐
                   </div>
                 )}
 
                 {/* Image */}
                 {pkg.image && (
-                  <div className="relative h-56 w-full overflow-hidden rounded-t-md">
+                    <div className="relative h-56 w-full overflow-hidden rounded-t-3xl">
                     <Image
                       src={pkg.image}
                       alt={pkg.title}
@@ -74,8 +73,8 @@ export default function PremiumPackagesSection({
                     <div
                       className={`absolute inset-0 ${
                         isFeatured
-                          ? "bg-main-color-dark/30"
-                          : "bg-main-black/20"
+                          ? "bg-[#2f7a63]/30"
+                          : "bg-[#201613]/20"
                       }`}
                     />
                   </div>
@@ -84,7 +83,7 @@ export default function PremiumPackagesSection({
                 {/* Content */}
                 <div className="flex flex-col flex-1 p-8">
                   {/* Title */}
-                  <h3 className={`text-2xl md:text-3xl font-extrabold mb-4`}>
+                  <h3 className="section-title text-2xl md:text-3xl mb-4 uppercase">
                     {pkg.title}
                   </h3>
 
@@ -94,12 +93,9 @@ export default function PremiumPackagesSection({
                       <li key={i} className="flex items-start gap-3 text-sm">
                         <span
                           className={`mt-0.5 shrink-0 w-6 h-6 rounded-full flex items-center justify-center ${
-                            isFeatured ? "bg-accent-gold" : "bg-main-color"
+                            isFeatured ? "bg-[#d6b87c]" : "bg-[#2f7a63]"
                           }`}>
-                          <Check
-                            className="w-3 h-3 text-white"
-                            strokeWidth={3}
-                          />
+                          <Check className="w-3 h-3 text-white" strokeWidth={3} />
                         </span>
                         <span>{feature}</span>
                       </li>
@@ -116,8 +112,8 @@ export default function PremiumPackagesSection({
                       transition-all duration-200
                       ${
                         isFeatured
-                          ? "bg-accent-gold text-black border border-black"
-                          : "bg-main-color text-white hover:bg-main-color-dark"
+                          ? "bg-[#d6b87c] text-[#201613] border border-[#201613]"
+                          : "bg-[#2f7a63] text-white hover:bg-[#1e5a49]"
                       }`}>
                     <FaWhatsapp className="size-5" />
                     اطلب الباقة الآن
@@ -127,7 +123,7 @@ export default function PremiumPackagesSection({
                 {/* Bottom accent bar */}
                 <div
                   className={`h-1.5 w-full ${
-                    isFeatured ? "bg-accent-gold" : "bg-main-color"
+                    isFeatured ? "bg-[#d6b87c]" : "bg-[#2f7a63]"
                   }`}
                 />
               </motion.div>

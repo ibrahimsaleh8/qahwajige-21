@@ -35,7 +35,7 @@ export default function TestimonialsSection() {
   return (
     <section
       id="testimonials"
-      className="relative py-28 bg-linear-to-b from-main-background/95 to-main-background/80 overflow-hidden">
+      className="relative py-20 bg-[#332327] overflow-hidden">
       {/* Subtle background doodles */}
       <div className="absolute inset-0 pointer-events-none">
         <svg
@@ -53,14 +53,14 @@ export default function TestimonialsSection() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="inline-block bg-main-color text-white text-xs font-bold uppercase tracking-wide px-5 py-2 rounded-full mb-5">
+          <span className="inline-block bg-[#2f7a63] text-[#f8f3e8] text-xs font-bold uppercase tracking-wide px-5 py-2 rounded-full mb-5">
             آراء العملاء
           </span>
-          <h2 className="text-4xl md:text-6xl font-extrabold text-main-black -rotate-1 leading-tight mb-4">
+          <h2 className="section-title text-4xl md:text-6xl text-[#f8f3e8] leading-tight mb-4 uppercase">
             ماذا قالوا عنّا؟
           </h2>
-          <div className="w-20 h-2 bg-accent-gold rounded-full mx-auto mb-4 shadow-glow" />
-          <p className="text-low-color max-w-xl mx-auto text-lg">
+          <div className="w-20 h-2 bg-[#d6b87c] rounded-full mx-auto mb-4" />
+          <p className="text-[#eadfca] max-w-xl mx-auto text-lg">
             ثقة مستمرة من عملائنا في مختلف المناسبات الخاصة والرسمية.
           </p>
         </div>
@@ -82,15 +82,15 @@ export default function TestimonialsSection() {
                 transition-transform duration-300 hover:-translate-y-2
                 ${
                   item.featured
-                    ? "bg-main-color scale-105 z-10"
-                    : "bg-card-background border border-main-color/10"
+                    ? "bg-[#2f7a63] scale-105 z-10"
+                    : "bg-[#f8f3e8] border border-[#2b1f1a]/10"
                 }`}>
               {/* Quote icon */}
               <div
                 className={`w-12 h-12 rounded-full flex items-center justify-center
-                ${item.featured ? "bg-white/15" : "bg-main-color/10"} transition-transform duration-300`}>
+                ${item.featured ? "bg-white/15" : "bg-[#2f7a63]/10"} transition-transform duration-300`}>
                 <Quote
-                  className={`w-6 h-6 ${item.featured ? "text-accent-gold" : "text-main-color"}`}
+                  className={`w-6 h-6 ${item.featured ? "text-[#d6b87c]" : "text-[#2f7a63]"}`}
                 />
               </div>
 
@@ -99,7 +99,7 @@ export default function TestimonialsSection() {
                 {Array.from({ length: item.stars }).map((_, i) => (
                   <Star
                     key={i}
-                    className="w-4 h-4 fill-accent-gold text-accent-gold"
+                    className="w-4 h-4 fill-[#d6b87c] text-[#d6b87c]"
                     strokeWidth={1.5}
                   />
                 ))}
@@ -107,25 +107,25 @@ export default function TestimonialsSection() {
 
               {/* Quote text */}
               <p
-                className={`text-base leading-relaxed flex-1 ${item.featured ? "text-white/90" : "text-black"}`}>
+                className={`text-base leading-relaxed flex-1 ${item.featured ? "text-white/90" : "text-[#4a392f]"}`}>
                 {item.quote}
               </p>
 
               {/* Divider */}
               <div
-                className={`h-px ${item.featured ? "bg-white/20" : "bg-main-color/10"}`}
+                className={`h-px ${item.featured ? "bg-white/20" : "bg-[#2f7a63]/15"}`}
               />
 
               {/* Author info */}
               <div className="flex items-center gap-4">
                 <div
                   className={`w-12 h-12 rounded-full flex items-center justify-center font-black text-lg
-                  ${item.featured ? "bg-accent-gold text-main-black" : "bg-main-color text-white"}`}>
+                  ${item.featured ? "bg-[#d6b87c] text-[#201613]" : "bg-[#2f7a63] text-white"}`}>
                   {item.initial}
                 </div>
                 <div>
                   <p
-                    className={`font-bold text-sm ${item.featured ? "text-white" : "text-main-black"}`}>
+                    className={`font-bold text-sm ${item.featured ? "text-white" : "text-[#201613]"}`}>
                     {item.author}
                   </p>
                 </div>
@@ -133,7 +133,7 @@ export default function TestimonialsSection() {
 
               {/* Bottom accent */}
               <div
-                className={`h-1.5 rounded-full -mx-8 -mb-8 mt-1 ${item.featured ? "bg-accent-gold" : "bg-main-color"}`}
+                className={`h-1.5 rounded-full -mx-8 -mb-8 mt-1 ${item.featured ? "bg-[#d6b87c]" : "bg-[#2f7a63]"}`}
               />
             </motion.div>
           ))}
