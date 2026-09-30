@@ -12,7 +12,6 @@ const navLinks = [
   { href: "/#services", label: "خدماتنا" },
   { href: "/blog", label: "خدمات الضيافة" },
   { href: "/#packages", label: "باقاتنا" },
-  { href: "/#contact", label: "اتصل بنا" },
 ];
 
 type HeaderProps = HeaderData & { whatsapp: string };

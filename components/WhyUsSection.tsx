@@ -1,16 +1,5 @@
 import { WhyUsSectionData } from "@/lib/responseType";
-import { Award, Clock, MapPin, User, LucideIcon } from "lucide-react";
-
-const iconMap: Record<string, LucideIcon> = {
-  award: Award,
-  clock: Clock,
-  shield: MapPin,
-  sparkles: User,
-  Award,
-  Clock,
-  Shield: MapPin,
-  Sparkles: User,
-};
+import ServiceIcon from "./ServiceIcon";
 
 export function WhyUsSection({
   description,
@@ -77,14 +66,12 @@ export function WhyUsSection({
 
           <div className="lg:col-span-7 grid sm:grid-cols-2 gap-4">
             {safeFeatures.map((feature, index) => {
-              const Icon = iconMap[feature.icon ?? "award"] ?? Award;
               return (
                 <article
                   key={`${feature.title}-${index}`}
                   className="rounded-3xl bg-[#f8f3e8] border border-[#2b1f1a]/10 p-6 shadow-[0_10px_24px_rgba(22,14,12,0.1)] hover:-translate-y-1 transition-transform duration-200">
-                  <div className="w-12 h-12 rounded-2xl bg-[#2f7a63] text-white flex items-center justify-center mb-5">
-                    <Icon className="w-6 h-6" />
-                  </div>
+                  <ServiceIcon icon={feature.icon} />
+
                   <h3 className="section-title text-2xl uppercase text-[#201613] mb-3">
                     {feature.title}
                   </h3>
